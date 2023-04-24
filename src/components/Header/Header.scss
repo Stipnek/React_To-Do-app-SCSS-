@@ -1,0 +1,39 @@
+@import '/src/index.scss';
+
+header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 0.2em;
+  padding: 0.5em;
+  height: 2em;
+  justify-content: space-between;
+  background-color: white;
+
+  @include l-desktop-only (2560px) {
+    font-size: 1.5rem;
+  }
+
+  @include mobile-only {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: $primary;
+
+    .titleIcon {
+      margin-right: 1rem;
+    }
+
+  }
+
+  .author {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: $primary;
+  }
+}

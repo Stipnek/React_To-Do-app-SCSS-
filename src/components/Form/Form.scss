@@ -1,0 +1,109 @@
+@import "/src/index.scss";
+
+.taskAdd {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  // width: 50%;
+  background-color: white;
+
+  @include l-desktop-only(2560px) {
+    font-size: 1.5rem;
+  }
+
+  @include mobile-only {
+    font-size: 0.8rem;
+  }
+
+  .addTitle {
+    @include taskAddTitle;
+  }
+
+  .mainFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    // margin-bottom: 20px;
+
+    .errorDescription {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid red;
+      background-color: red;
+      color: white;
+      height: 20px;
+      padding: 5px;
+      width: 90%;
+    }
+
+    .inputDesc {
+      @include inputs;
+
+      .descField {
+        @include fields;
+
+        @include l-desktop-only(2560px) {
+          font-size: 1.5rem;
+        }
+
+        @include mobile-only {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .inputSelect {
+      @include inputs;
+      
+
+      .selectField {
+        @include fields;
+        text-align: center;
+        
+
+        @include l-desktop-only(2560px) {
+          font-size: 1.5rem;
+        }
+
+        @include mobile-only {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .addButton {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      align-content: center;
+      width: 150px;
+      font-size: 20px;
+      border: none;
+      height: 40px;
+      transition: 0.3s;
+      background-color: $success;
+      color: white;
+
+      &:hover {
+        @include hoverFeature;
+        background-color: white;
+        box-shadow: 1px 1px $success;
+        color: $success;
+      }
+
+      @include l-desktop-only(2560px) {
+        font-size: 1.5rem;
+      }
+
+      @include mobile-only {
+        font-size: 0.8rem;
+        width: 80px;
+      }
+    }
+  }
+}
